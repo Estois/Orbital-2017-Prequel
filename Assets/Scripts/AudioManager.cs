@@ -1,95 +1,95 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Audio;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class Sound
 {
-	public AudioMixerGroup audioMixerGroup;
+	
+	public string name;
+	public AudioClip clip;
 
 	private AudioSource source;
 
-	public string clipName;
-	public AudioClip clip;
-
 	[Range (0f, 1f)]
-	public float volume;
-	[Range (0f, 3f)]
-	public float pitch;
+	public float volume = 0.7f;
+	[Range (0.5f, 1.5f)]
+	public float pitch = 0.7f;
+
+	[Range (0f, 0.5f)]
+	public float randomVolume = 0.1f;
+	[Range (0f, 0.5f)]
+	public float randomPitch = 0.1f;
 
 	public bool loop = false;
-	public bool playOnAwake = false;
 
 	public void SetSource (AudioSource _source)
 	{
 		source = _source;
 		source.clip = clip;
-		source.pitch = pitch;
-		source.volume = volume;
-		source.playOnAwake = playOnAwake;
 		source.loop = loop;
-		source.outputAudioMixerGroup = audioMixerGroup;
 	}
 
 	public void Play ()
 	{
+		source.volume = volume * (1 + Random.Range (-randomVolume / 2f, randomVolume / 2f));
+		source.pitch = pitch * (1 + Random.Range (-randomPitch / 2f, randomPitch / 2f));
 		source.Play ();
 	}
-}
 
+	public void Stop ()
+	{
+		source.Stop ();
+	}
+}
 
 public class AudioManager : MonoBehaviour
 {
 
-	public static AudioMixer audioMixer;
-
-
-	//functions to set the specific volumes below
-	public void SetMasterVolume (float masterLv)
-	{
-		audioMixer.SetFloat ("MasterVolume", masterLv);
-	}
-
-	public void SetSFXVolume (float sfxLv)
-	{
-		audioMixer.SetFloat ("SFXVolume", sfxLv);
-	}
-
-	public void SetMusicVolume (float musicLv)
-	{
-		audioMixer.SetFloat ("MusicVolume", musicLv);
-	}
-
 	public static AudioManager instance;
+
+
 	[SerializeField]
 	Sound[] sound;
 
 	void Awake ()
 	{
-		if (instance == null) {
+		if (instance != null) {
+			if (instance != this) {
+				Destroy (this.gameObject);
+			}
+		} else {
 			instance = this;
-		} else if (instance != this) {
-			Destroy (gameObject);
 		}
-
 	}
 
 	void Start ()
 	{
 		for (int i = 0; i < sound.Length; i++) {
-			GameObject _go = new GameObject ("Sound_ " + i + "_" + sound [i].clipName);
+			GameObject _go = new GameObject ("Sound_ " + i + "_" + sound [i].name);
 			_go.transform.SetParent (this.transform);
 			sound [i].SetSource (_go.AddComponent<AudioSource> ());
 		}
+
 		PlaySound ("BGMusic");
+
 	}
 
 	public void PlaySound (string _name)
 	{
 		for (int i = 0; i < sound.Length; i++) {
-			if (sound [i].clipName == _name) {
+			if (sound [i].name == _name) {
 				sound [i].Play ();
+				return;
+			}
+		}
+
+		Debug.LogWarning ("AudioManager: Sound not found in array: " + _name);
+	}
+
+	public void StopSound (string _name)
+	{
+		for (int i = 0; i < sound.Length; i++) {
+			if (sound [i].name == _name) {
+				sound [i].Stop ();
 				return;
 			}
 		}

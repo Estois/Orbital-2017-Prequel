@@ -17,9 +17,6 @@ public class Menu : MonoBehaviour
 	[SerializeField]
 	GameObject MenuUI;
 
-	AudioManager audioManager;
-
-
 	enum MenuStates
 	{
 		Playing,
@@ -34,7 +31,6 @@ public class Menu : MonoBehaviour
 	void Start ()
 	{
 		currentState = MenuStates.Playing;
-		audioManager = AudioManager.instance;
 	}
 
 	void Update ()
@@ -125,19 +121,5 @@ public class Menu : MonoBehaviour
 		currentState = MenuStates.Pause;
 
 	}
-
-	public void SetSFXLv (float sfxLv)
-	{
-		audioManager.SetSFXVolume (sfxLv);
-	}
-
-	public void SetMusicLv (float musicLv)
-	{
-		audioManager.SetMusicVolume (musicLv);
-	}
-
-	public void SetMasterLv (float masterLv)
-	{
-		audioManager.SetMasterVolume (masterLv);
-	}
+		
 }

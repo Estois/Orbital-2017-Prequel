@@ -70,20 +70,18 @@ public class PlayerController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.transform.tag == "MovingPlatform")
-        {
-            transform.parent = other.transform;
-        }
-    }
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = other.transform;
+		}
+	}
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if(other.transform.tag == "MovingPlatform")
-        {
-            transform.parent = null;
-        }
-    }
+	private void OnCollisionExit2D (Collision2D other)
+	{
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = null;
+		}
+	}
 
 }

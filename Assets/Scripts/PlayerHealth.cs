@@ -33,6 +33,11 @@ public class PlayerHealth : MonoBehaviour
 			healthBar.value -= 0.2f;
 			currHealth = healthBar.value;
 		}
+
+		if (col.gameObject.tag == "spike") {
+			healthBar.value -= 100.0f;
+			currHealth = healthBar.value;
+		}
 	}
 
 	void Update ()

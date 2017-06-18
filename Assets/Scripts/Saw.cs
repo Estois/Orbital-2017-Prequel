@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Saw : MonoBehaviour
 {
-	public AudioManager audioManager;
+	AudioManager audioManager;
 
 	float sawSpeed = 300f;
 
 	void Start ()
 	{
 		audioManager = AudioManager.instance;
-		playSawSound ();
 	}
 
 	void Update ()
@@ -19,7 +18,7 @@ public class Saw : MonoBehaviour
 		transform.Rotate (0, 0, sawSpeed * Time.deltaTime);
 	}
 
-	public void playSawSound ()
+	void OnCollisionEnter2D (Collision2D col)
 	{
 		audioManager.PlaySound ("SawSound");
 	}

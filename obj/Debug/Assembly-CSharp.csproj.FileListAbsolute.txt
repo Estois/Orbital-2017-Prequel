@@ -29,3 +29,34 @@ C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017\Orbital 2017\Temp\bin\Deb
 C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017\Orbital 2017\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017\Orbital 2017\obj\Debug\Assembly-CSharp.dll
 C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017\Orbital 2017\obj\Debug\Assembly-CSharp.pdb
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\obj\Debug\Assembly-CSharp.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\obj\Debug\Assembly-CSharp.pdb
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\nunit.framework.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEditor.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.TestRunner.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.VR.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEditor.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.TestRunner.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\nunit.framework.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\WC-LianLi\Desktop\Unity Projects\Orbital 2017 (15 June)\Orbital-2017-Prequel-master\Temp\bin\Debug\UnityEngine.VR.xml
