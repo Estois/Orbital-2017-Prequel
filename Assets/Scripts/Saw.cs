@@ -11,15 +11,11 @@ public class Saw : MonoBehaviour
 	void Start ()
 	{
 		audioManager = AudioManager.instance;
+		audioManager.PlaySound ("SawSound");
 	}
 
 	void Update ()
 	{
 		transform.Rotate (0, 0, sawSpeed * Time.deltaTime);
-	}
-
-	void OnCollisionEnter2D (Collision2D col)
-	{
-		audioManager.PlaySound ("SawSound");
 	}
 }

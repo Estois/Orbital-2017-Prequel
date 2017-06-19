@@ -10,14 +10,9 @@ public class Sound
 	private AudioSource source;
 
 	[Range (0f, 1f)]
-	public float volume = 0.7f;
-	[Range (0.5f, 1.5f)]
-	public float pitch = 0.7f;
-
-	[Range (0f, 0.5f)]
-	public float randomVolume = 0.1f;
-	[Range (0f, 0.5f)]
-	public float randomPitch = 0.1f;
+	public float volume;
+	[Range (0f, 3f)]
+	public float pitch;
 
 	public bool loop = false;
 
@@ -26,12 +21,12 @@ public class Sound
 		source = _source;
 		source.clip = clip;
 		source.loop = loop;
+		source.volume = volume;
+		source.pitch = pitch;
 	}
 
 	public void Play ()
 	{
-		source.volume = volume * (1 + Random.Range (-randomVolume / 2f, randomVolume / 2f));
-		source.pitch = pitch * (1 + Random.Range (-randomPitch / 2f, randomPitch / 2f));
 		source.Play ();
 	}
 
@@ -68,9 +63,7 @@ public class AudioManager : MonoBehaviour
 			_go.transform.SetParent (this.transform);
 			sound [i].SetSource (_go.AddComponent<AudioSource> ());
 		}
-
 		PlaySound ("BGMusic");
-
 	}
 
 	public void PlaySound (string _name)
