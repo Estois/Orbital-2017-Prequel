@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
 	private bool Attacking = false;
 
 	private float attackTimer = 0;
-	private float attackCd = 2f;
+	public float attackCd = 1f;
 
 
 	public Collider2D attackTrigger;
@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetMouseButtonDown (0) && !Attacking) {
+		if (Input.GetKey ("z") && !Attacking) {
 			Attacking = true;
 			attackTimer = attackCd;
 			attackTrigger.enabled = true;
