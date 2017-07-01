@@ -12,8 +12,8 @@ public class PlayerHealth : MonoBehaviour
 
 	Animator anim;
 
-	float maxHealth = 100;
-	float currHealth;
+	public float maxHealth = 100.0f;
+	public float currHealth;
 
 	void Start ()
 	{
@@ -38,6 +38,13 @@ public class PlayerHealth : MonoBehaviour
 			healthBar.value -= 100.0f;
 			currHealth = healthBar.value;
 		}
+
+		if (col.gameObject.tag == "HealthBonus") {
+			healthBar.value += 15.0f;
+			currHealth = healthBar.value;
+			Destroy (col.gameObject);
+		}
+
 	}
 
 	void Update ()
@@ -52,6 +59,6 @@ public class PlayerHealth : MonoBehaviour
 			//enable deathUI
 			DeathUI.gameObject.SetActive (true);
 		}
-
+		Debug.Log ("Current Health: " + currHealth);
 	}
 }

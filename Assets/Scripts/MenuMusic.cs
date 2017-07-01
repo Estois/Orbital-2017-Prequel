@@ -8,6 +8,15 @@ public class MenuMusic : MonoBehaviour
 
 	public GameObject musicPlayer;
 
+	AudioSource audio;
+
+	void Start ()
+	{
+		audio = GetComponent<AudioSource> ();
+		audio.enabled = true;
+		audio.Play ();
+	}
+
 	void Awake ()
 	{
 		//When the scene loads it checks if there is an object called "MUSIC".
