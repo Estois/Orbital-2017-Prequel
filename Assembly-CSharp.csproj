@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\SortLayer.cs" />
      <Compile Include="Assets\Scripts\SpikeTrap.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
+     <Compile Include="Assets\Scripts\SwitchTriggerTrap.cs" />
      <Compile Include="Assets\Scripts\ZombieHealth.cs" />
      <None Include="Assets\Graphics\GUI\blueSheet.xml" />
  <Reference Include="UnityEngine.UI">

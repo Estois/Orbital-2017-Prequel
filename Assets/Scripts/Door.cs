@@ -5,16 +5,18 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 	Animator anim;
-
+	GameManager gm;
 	//is entry or exit door
 
 	public GameObject DoorType;
 	//track state of door
 	int stateOfDoor = 1;
 
+	public int nextLevel;
+
 	void Start ()
 	{
-
+		gm = FindObjectOfType<GameManager> ();
 		anim = GetComponent<Animator> ();
 		if (DoorType.name == "EntryDoor") {
 			anim.SetFloat ("DoorState", 3);
@@ -72,6 +74,13 @@ public class Door : MonoBehaviour
 	public int GetDoorState ()
 	{
 		return stateOfDoor;
+	}
+
+	void OnTriggerEnter2D (Collider2D col)
+	{
+		if (GetDoorState () == 3) {
+			gm.LoadNextLevel (nextLevel);
+		}
 	}
 
 }

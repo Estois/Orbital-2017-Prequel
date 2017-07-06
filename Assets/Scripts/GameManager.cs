@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class GameManager : MonoBehaviour
 	void Start ()
 	{
 		GetNoOfSwitches ();
+	}
+
+	public void LoadNextLevel (int x)
+	{
+		SceneManager.LoadScene (x);
 	}
 
 	public int GetNoOfSwitches ()
