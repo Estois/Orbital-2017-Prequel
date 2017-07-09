@@ -14,8 +14,6 @@ public class MovingPlatform : MonoBehaviour {
 
     public int pointSelection;
 
-    public float waitTime;
-
     private bool reverseCheck = false;
 
 	// Use this for initialization

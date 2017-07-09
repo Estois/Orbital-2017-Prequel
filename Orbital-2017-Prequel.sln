@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel.Plugins", "Orbital-2017-Prequel.Plugins.csproj", "{8B970A29-A881-70D1-1DBB-307CFB19D51A}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel", "Orbital-2017-Prequel.csproj", "{BCC1F351-D3B7-02C1-503E-A8663CA4CE28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel.Editor.Plugins", "Orbital-2017-Prequel.Editor.Plugins.csproj", "{2BF67CDD-2DB8-8367-BCBC-6E951F3A7779}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B970A29-A881-70D1-1DBB-307CFB19D51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B970A29-A881-70D1-1DBB-307CFB19D51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B970A29-A881-70D1-1DBB-307CFB19D51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B970A29-A881-70D1-1DBB-307CFB19D51A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCC1F351-D3B7-02C1-503E-A8663CA4CE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCC1F351-D3B7-02C1-503E-A8663CA4CE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC1F351-D3B7-02C1-503E-A8663CA4CE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC1F351-D3B7-02C1-503E-A8663CA4CE28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF67CDD-2DB8-8367-BCBC-6E951F3A7779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF67CDD-2DB8-8367-BCBC-6E951F3A7779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF67CDD-2DB8-8367-BCBC-6E951F3A7779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF67CDD-2DB8-8367-BCBC-6E951F3A7779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

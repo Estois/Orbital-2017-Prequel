@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
 
-	private bool Attacking = false;
+	public static bool Attacking = false;
 
 	private float attackTimer = 0;
 	public float attackCd = 1f;
@@ -40,5 +40,4 @@ public class PlayerAttack : MonoBehaviour
 	
 		anim.SetBool ("Attacking", Attacking);
 	}
-
 }

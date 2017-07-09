@@ -10,6 +10,7 @@ public class ZombieHealth : MonoBehaviour
 	float maxHealth = 60;
 	float currHealth;
 
+
 	void Start ()
 	{
 		anim = gameObject.GetComponent<Animator> ();
