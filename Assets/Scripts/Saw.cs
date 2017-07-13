@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Saw : MonoBehaviour
 {
-	AudioSource audio;
+	AudioSource audioSource;
 
 	float sawSpeed = 300f;
 
 	void Start ()
 	{
-		audio = GetComponent<AudioSource> ();
-		audio.enabled = true;
-		audio.Play ();
+		audioSource = GetComponent<AudioSource> ();
+		audioSource.enabled = true;
+		audioSource.Play ();
 	}
 
 	void Update ()

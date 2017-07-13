@@ -5,7 +5,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
 
-	AudioSource audio;
+	AudioSource audioSource;
 
 	[SerializeField]
 	GameObject switchOn;
@@ -16,8 +16,8 @@ public class Switch : MonoBehaviour
 
 	void Start ()
 	{
-		audio = GetComponent<AudioSource> ();
-		audio.enabled = false;
+		audioSource = GetComponent<AudioSource> ();
+		audioSource.enabled = false;
 		//set the switch to off sprite
 		gameObject.GetComponent<SpriteRenderer> ().sprite = switchOff.GetComponent<SpriteRenderer> ().sprite;
 	}
@@ -29,7 +29,7 @@ public class Switch : MonoBehaviour
 		//set isOn to true when triggered
 		isOn = true;
 
-		audio.enabled = true;
-		audio.Play ();
+		audioSource.enabled = true;
+		audioSource.Play ();
 	}
 }

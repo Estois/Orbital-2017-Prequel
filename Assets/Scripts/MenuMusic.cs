@@ -8,13 +8,13 @@ public class MenuMusic : MonoBehaviour
 
 	public GameObject musicPlayer;
 
-	AudioSource audio;
+	AudioSource audioSource;
 
 	void Start ()
 	{
-		audio = GetComponent<AudioSource> ();
-		audio.enabled = true;
-		audio.Play ();
+		audioSource = GetComponent<AudioSource> ();
+		audioSource.enabled = true;
+		audioSource.Play ();
 	}
 
 	void Awake ()

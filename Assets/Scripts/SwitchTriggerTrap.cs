@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwitchTriggerTrap : MonoBehaviour
 {
 
-	AudioSource audio;
+	AudioSource audioSource;
 
 	public GameObject[] spike;
 
@@ -18,8 +18,8 @@ public class SwitchTriggerTrap : MonoBehaviour
 
 	void Start ()
 	{
-		audio = GetComponent<AudioSource> ();
-		audio.enabled = false;
+		audioSource = GetComponent<AudioSource> ();
+		audioSource.enabled = false;
 		//set the switch to off sprite
 		gameObject.GetComponent<SpriteRenderer> ().sprite = switchOff.GetComponent<SpriteRenderer> ().sprite;
 	}
@@ -31,8 +31,8 @@ public class SwitchTriggerTrap : MonoBehaviour
 		//set isOn to true when triggered
 		isOn = true;
 
-		audio.enabled = true;
-		audio.Play ();
+		audioSource.enabled = true;
+		audioSource.Play ();
 
 		spike = GameObject.FindGameObjectsWithTag ("MovingSpike");
 		for (int i = 0; i < spike.Length; i++) {

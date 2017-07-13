@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 	public Slider healthBar;
 	public Text healthText;
 	public GameObject DeathUI;
+	public GameObject Switches;
 
 	Animator anim;
 
@@ -49,6 +50,11 @@ public class PlayerHealth : MonoBehaviour
 			healthBar.value -= 1.0f;
 			currHealth = healthBar.value;
 		}
+
+		if (col.gameObject.tag == "Zombie") {
+			healthBar.value -= 2.0f;
+			currHealth = healthBar.value;
+		}
 	}
 
 	void Update ()
@@ -62,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
 			GetComponent<PlayerController> ().enabled = false;
 			//enable deathUI
 			DeathUI.gameObject.SetActive (true);
+			Switches.gameObject.SetActive (false);
 		}
 		Debug.Log ("Current Health: " + currHealth);
 	}

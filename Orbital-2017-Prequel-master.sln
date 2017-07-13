@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel-master", "Assembly-CSharp-firstpass.csproj", "{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel-master", "Assembly-CSharp.csproj", "{647047C1-B296-E59A-FA50-CE6A0EDA18F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbital-2017-Prequel-master", "Assembly-CSharp-Editor-firstpass.csproj", "{8DCCF87C-24D3-06E1-BDD1-E479223215C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{647047C1-B296-E59A-FA50-CE6A0EDA18F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{647047C1-B296-E59A-FA50-CE6A0EDA18F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{647047C1-B296-E59A-FA50-CE6A0EDA18F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{647047C1-B296-E59A-FA50-CE6A0EDA18F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCCF87C-24D3-06E1-BDD1-E479223215C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCCF87C-24D3-06E1-BDD1-E479223215C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCCF87C-24D3-06E1-BDD1-E479223215C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCCF87C-24D3-06E1-BDD1-E479223215C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

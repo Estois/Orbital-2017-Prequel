@@ -15,6 +15,27 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	Text switchCount;
 
+	public static GameManager instance;
+
+	void Awake ()
+	{
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
+	}
+
+	public void LoadLastSave (int x)
+	{
+		SceneManager.LoadScene (x);
+	}
+
+	public int GetCurrentLevel ()
+	{
+		return SceneManager.GetActiveScene ().buildIndex;
+	}
+
 	void Start ()
 	{
 		GetNoOfSwitches ();
