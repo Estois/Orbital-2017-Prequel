@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour
 	public float jumpForce = 320f;
 	//jump force
 	public LayerMask whatIsGround;
-    // what layer is considered the ground
+	// what layer is considered the ground
 
-    bool attackStatus = PlayerAttack.Attacking;
+	bool attackStatus = PlayerAttack.Attacking;
 
 	void Start ()
 	{
@@ -41,21 +41,17 @@ public class PlayerController : MonoBehaviour
 
 		anim.SetFloat ("vSpeed", GetComponent<Rigidbody2D> ().velocity.y);
 
-        if (!attackStatus)
-        {
-            float move = Input.GetAxis("Horizontal"); //get direction of movement
-            GetComponent<Rigidbody2D>().velocity = new Vector2(move * speed, GetComponent<Rigidbody2D>().velocity.y); //add velocity to the Rigidbody of the player in the move direction multiplied with our speed
-            anim.SetFloat("Speed", Mathf.Abs(move));
+		if (!attackStatus) {
+			float move = Input.GetAxis ("Horizontal"); //get direction of movement
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * speed, GetComponent<Rigidbody2D> ().velocity.y); //add velocity to the Rigidbody of the player in the move direction multiplied with our speed
+			anim.SetFloat ("Speed", Mathf.Abs (move));
 
-            if (move > 0 && !facingRight)
-            {
-                Flip();
-            }
-            else if (move < 0 && facingRight)
-            {
-                Flip();
-            }
-        }
+			if (move > 0 && !facingRight) {
+				Flip ();
+			} else if (move < 0 && facingRight) {
+				Flip ();
+			}
+		}
 	}
 
 	void Update ()
