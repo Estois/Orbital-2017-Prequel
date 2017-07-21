@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetKey ("z") && !Attacking) {
+		if (Input.GetKey ("c") && !Attacking) {
 			Attacking = true;
 			attackTimer = attackCd;
 			attackTrigger.enabled = true;
