@@ -87,28 +87,32 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MobMover.cs" />
+    <Compile Include="Assets\MobHealth.cs" />
     <Compile Include="Assets\Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundTiles.cs" />
+    <Compile Include="Assets\Scripts\ButtonHover.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\FollowTarget.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\MenuMusic.cs" />
+    <Compile Include="Assets\Scripts\MobMover.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Scripts\Saw.cs" />
     <Compile Include="Assets\Scripts\SortLayer.cs" />
     <Compile Include="Assets\Scripts\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Switch.cs" />
     <Compile Include="Assets\Scripts\SwitchTriggerTrap.cs" />
     <Compile Include="Assets\Scripts\ZombieHealth.cs" />
-    <Compile Include="Assets\ZombieModAI.cs" />
-    <Compile Include="Assets\ZombieMoveAnim.cs" />
+    <Compile Include="Assets\Scripts\ZombieModAI.cs" />
+    <Compile Include="Assets\Scripts\ZombieMoveAnim.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\GUI\blueSheet.xml" />

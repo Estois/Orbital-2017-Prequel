@@ -177,6 +177,7 @@
     <Compile Include="Assets\Plugins\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\Plugins\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\Plugins\AstarPathfindingProject\changelog.cs" />
+    <Compile Include="Assets\Plugins\ButtonSoundsEditor\ButtonClickSound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\GUI\blueSheet.xml" />

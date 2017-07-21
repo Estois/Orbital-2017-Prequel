@@ -145,6 +145,7 @@
     <Compile Include="Assets\Plugins\AstarPathfindingProject\Editor\SeekerEditor.cs" />
     <Compile Include="Assets\Plugins\AstarPathfindingProject\Legacy\Editor\LegacyAIPathEditor.cs" />
     <Compile Include="Assets\Plugins\AstarPathfindingProject\Legacy\Editor\LegacyEditorHelper.cs" />
+    <Compile Include="Assets\Plugins\ButtonSoundsEditor\Editor\ButtonSoundsEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Graphics\GUI\blueSheet.xml" />

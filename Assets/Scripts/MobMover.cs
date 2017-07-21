@@ -16,7 +16,7 @@ public class MobMover : MonoBehaviour {
 
     public int pointSelection;
 
-    private bool reverseCheck = false;
+    private bool faceLeft = false;
 
     // Use this for initialization
     void Start () {
@@ -33,22 +33,33 @@ public class MobMover : MonoBehaviour {
             mob.transform.position = Vector3.MoveTowards(mob.transform.position, currentPoint.position, speed);
             if (mob.transform.position == currentPoint.position)
             {
-                if (reverseCheck == false)
+                if (faceLeft == false)
                     pointSelection++;
-                else if (reverseCheck == true)
+                else if (faceLeft == true)
                     pointSelection--;
                 if (pointSelection == points.Length)
                 {
                     pointSelection -= 2;
-                    reverseCheck = true;
+                    faceLeft = true;
+                    Flip();
                 }
                 if (pointSelection < 0)
                 {
-                    reverseCheck = false;
+                    faceLeft = false;
                     pointSelection = 0;
+                    Flip();
                 }
                 currentPoint = points[pointSelection];
             }
         }
+    }
+
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
+
+        //flip on x-axis
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
