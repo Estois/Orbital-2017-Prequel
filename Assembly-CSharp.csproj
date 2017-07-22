@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{647047C1-B296-E59A-FA50-CE6A0EDA18F2}</ProjectGuid>
+    <ProjectGuid>{DA64DAA2-2144-D647-8E70-0566EA617501}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\MenuMusic.cs" />
+     <Compile Include="Assets\Scripts\MobHealth.cs" />
      <Compile Include="Assets\Scripts\MobMover.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\SaveLoadManager.cs" />
      <Compile Include="Assets\Scripts\Saw.cs" />
+     <Compile Include="Assets\Scripts\ShrinkDeath.cs" />
      <Compile Include="Assets\Scripts\SortLayer.cs" />
      <Compile Include="Assets\Scripts\SpikeTrap.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
@@ -105,12 +107,12 @@
  <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>C:/Users/WC-LianLi/Desktop/OrbitalLatest/Orbital-2017-Prequel-master/Assets/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>C:/Users/WC-LianLi/Desktop/OrbitalLatest/Orbital-2017-Prequel/Assets/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{AAEABAFC-817F-4C46-B45B-5E648E7CBE6C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{7FD91482-D7F4-8B6D-C79E-C8703848A8D3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
