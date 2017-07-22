@@ -6,6 +6,8 @@ using Pathfinding;
 [RequireComponent(typeof (Seeker))]
 public class ZombieModAI : MonoBehaviour {
 
+    Animator anim;
+
     //what to chase
     public Transform target;
 
@@ -32,18 +34,23 @@ public class ZombieModAI : MonoBehaviour {
     //The waypoint we are currently moving towards
     private int currentWayPoint = 0;
 
+    private bool faceLeft;
+
+    private bool isAlive = true;
+    
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-
-        if(target == null)
+        anim = gameObject.GetComponent<Animator>();
+        if (target == null)
         {
             Debug.LogError("No Player Found");
             return;
         }
 
+        faceLeft = false;
         //start a new path to the target position, return the result to the OnPathComplete method
         seeker.StartPath(transform.position, target.position, OnPathComplete);
 
@@ -79,47 +86,76 @@ public class ZombieModAI : MonoBehaviour {
 
     }
 
+    void Update()
+    {
+        isAlive = (!anim.GetBool("isDead"));
+    }
     void FixedUpdate()
     {
-        if (target == null)
+        if (isAlive)
         {
-            //Insert a player search here
-            return;
-        }
+            if (target == null)
+            {
+                //Insert a player search here
+                return;
+            }
 
-        //Always look at player?
+            //Always look at player?
 
-        if (path == null)
-        {
-            return;
-        }
-
-        if (currentWayPoint >= path.vectorPath.Count)
-        {
-            if (pathIsEnded)
+            if (path == null)
             {
                 return;
             }
-            Debug.Log("End of path reached.");
-            pathIsEnded = true;
-            return;
+
+            if (currentWayPoint >= path.vectorPath.Count)
+            {
+                if (pathIsEnded)
+                {
+                    return;
+                }
+
+                Debug.Log("End of path reached.");
+                pathIsEnded = true;
+                return;
+            }
+            pathIsEnded = false;
+
+            //Direction to next waypoint
+            Vector3 dir = (path.vectorPath[currentWayPoint] - transform.position).normalized;
+            dir *= speed * Time.fixedDeltaTime;
+
+            if (dir.x < 0 && faceLeft == false)
+            {
+                faceLeft = true;
+                Flip();
+            }
+
+            else if (dir.x > 0 && faceLeft == true)
+            {
+                faceLeft = false;
+                Flip();
+            }
+
+            //Move the AI
+
+            rb.AddForce(dir, fMode);
+
+            float dist = Vector3.Distance(transform.position, path.vectorPath[currentWayPoint]);
+
+            if (dist < nextWayPointDistance)
+            {
+                currentWayPoint++;
+                return;
+            }
         }
-        pathIsEnded = false;
+    }
 
-        //Direction to next waypoint
-        Vector3 dir = (path.vectorPath[currentWayPoint] - transform.position).normalized;
-        dir *= speed * Time.fixedDeltaTime;
+    void Flip()
+    {
+        Vector3 theScale = transform.localScale;
 
-        //Move the AI
-
-        rb.AddForce(dir, fMode);
-
-        float dist = Vector3.Distance(transform.position, path.vectorPath[currentWayPoint]);
-
-        if (dist < nextWayPointDistance)
-        {
-            currentWayPoint++;
-            return;
-        }
+        //flip on x-axis
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
