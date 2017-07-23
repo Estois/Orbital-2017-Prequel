@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 	void OnTriggerStay2D (Collider2D col)
 	{
 
-		if (col.gameObject.tag == "acid") {
+		/*if (col.gameObject.tag == "acid") {
 			healthBar.value -= 0.2f;
 			currHealth = healthBar.value;
 		}
@@ -40,13 +40,13 @@ public class PlayerHealth : MonoBehaviour
 			healthBar.value += 15.0f;
 			currHealth = healthBar.value;
 			Destroy (col.gameObject);
-		}
+		}*/
 
 	}
 
 	void OnCollisionStay2D (Collision2D col)
 	{
-		if (col.gameObject.tag == "saw") {
+		/*if (col.gameObject.tag == "saw") {
 			healthBar.value -= 1.0f;
 			currHealth = healthBar.value;
 		}
@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
 		if (col.gameObject.tag == "Zombie") {
 			healthBar.value -= 2.0f;
 			currHealth = healthBar.value;
-		}
+		}*/
 	}
 
 	void Update ()
