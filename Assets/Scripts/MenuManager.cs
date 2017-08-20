@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 	public void ExitGame ()
 	{
 		Debug.Log ("QUIT");
-		UnityEditor.EditorApplication.isPlaying = false;
+//		UnityEditor.EditorApplication.isPlaying = false;
 		Application.Quit ();
 	}
 
