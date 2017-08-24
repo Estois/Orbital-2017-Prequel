@@ -110,7 +110,7 @@ public class Menu : MonoBehaviour
 	public void Exit ()
 	{
 
-		UnityEditor.EditorApplication.isPlaying = false;
+//		UnityEditor.EditorApplication.isPlaying = false;
 		Application.Quit ();
 
 	}
@@ -120,6 +120,11 @@ public class Menu : MonoBehaviour
 
 		currentState = MenuStates.Pause;
 
+	}
+
+	public void MainMenuButton ()
+	{
+		SceneManager.LoadScene (0);
 	}
 		
 }
